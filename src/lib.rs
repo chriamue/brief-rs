@@ -8,6 +8,7 @@ use rand::prelude::*;
 const SEED: u64 = 0x34985739;
 
 /// Define a struct to represent the BRIEF descriptor
+#[derive(Debug, Clone)]
 pub struct BriefDescriptor {
     test_pairs: Vec<((u32, u32), (u32, u32))>,
 }

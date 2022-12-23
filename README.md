@@ -1,6 +1,6 @@
 # brief-rs
 
-This project implements the [Binary Robust Independent Elementary Features (BRIEF)](https://en.wikipedia.org/wiki/Binary_robust_independent_elementary_features) descriptor in Rust. BRIEF is a local image descriptor that is used for tasks such as image matching and object recognition. It is a fast and lightweight alternative to other local feature descriptors such as SIFT (Scale-Invariant Feature Transform) and SURF (Speeded Up Robust Feature).
+This project implements the [Binary Robust Independent Elementary Features (BRIEF)](https://docs.opencv.org/4.5.0/dc/d7d/tutorial_py_brief.html) descriptor in Rust. BRIEF is a local image descriptor that is used for tasks such as image matching and object recognition. It is a fast and lightweight alternative to other local feature descriptors such as SIFT (Scale-Invariant Feature Transform) and SURF (Speeded Up Robust Feature).
 
 ## Installation
 
