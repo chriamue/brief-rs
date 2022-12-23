@@ -15,17 +15,18 @@ brief = "0.1.0"
 
 ```rust
 use brief::BriefDescriptor;
-use image::{GrayImage, Luma};
+use image::{GrayImage, GenericImage};
 
 // Create a new BRIEF descriptor with 32 test pairs
-let brief = BriefDescriptor::new(32);
+let brief = BriefDescriptor::new(32, 32);
 
 // Load an image and extract a patch
-let img = image::open("image.jpg").unwrap().to_luma();
-let patch = &img[100..150][100..150];
+let mut img = image::open("Lenna_gray.jpg").unwrap().into_luma8();
+let patch = &img.sub_image(100, 100, 50, 50).to_image();
 
 // Compute the BRIEF descriptor for the patch
 let descriptor = brief.compute(patch);
+println!("{:?}", descriptor);
 ```
 
 This example assumes that you have the image crate installed, and that you have an image file named image.jpg in the current directory. It creates a new BRIEF descriptor with a specified number of test pairs, and then uses the compute method to calculate the BRIEF descriptor for a patch of an image.
